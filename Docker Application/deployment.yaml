@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: extra-credit
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: cloud-assignment-v2
+  template:
+    metadata:
+      labels:
+        app: cloud-assignment-v2
+    spec:
+      containers:
+      - name: cloud-assignment-v2
+        image: cloud-assignment-v2:latest # Replace with your Docker image name
+        ports:
+        - containerPort: 8080

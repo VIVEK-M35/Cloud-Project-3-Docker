@@ -1,0 +1,8 @@
+version: '3'
+services:
+  my-nginx:
+    image: my-nginx-app:latest
+    deploy:
+      replicas: 2
+    ports:
+      - "80:80"
